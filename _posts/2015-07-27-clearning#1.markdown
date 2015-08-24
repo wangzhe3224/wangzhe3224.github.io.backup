@@ -2,7 +2,8 @@
 layout: post
 title:  "Learn C #1"
 date:   2015-07-27
-tags: C++
+categories: c++
+tags: c++
 ---
 ##There are four components in a programming language:
 
