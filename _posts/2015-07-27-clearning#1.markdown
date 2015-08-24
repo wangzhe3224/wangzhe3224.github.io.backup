@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Learn C #1"
+date:   2015-07-27
+tags: C++
+---
+##There are four components in a programming language:
+
+###1. data;
+
+###2. operation;
+
+###3. control flow;
+
+###4. input and output.
+
+--------
+
+We start with the first part: **data**.
+
+>tips: when you define a variable, it's **better** to give it a initial value.
+
+##basic data type:
+
+- char
+
+- int
+
+- float
+
+- bool
+
+>Tips: You can use 'Tpyename variableName' to define a certain type of variable.
+
+### int
+
+{% highlight c++ %}
+int a = -123;
+cout << hex << a << endl;//print hex number..
+cout << oct << a << endl;//print oct number..
+cout << dec << a << endl;//pring dec number. you must do this,,or it will print oct ..
+//Then we can input a hex number..
+int b = 0xFFFFF85; // a hex number
+int c = 033333232; // a oct number
+cout << dec << b << endl;
+{% endhighlight %}
+
+### float
+
+* float - 4 byte - precise: 8 
+* double - 8 byte - precise: 15
+* long double - 8 byte - precise: 15
+
+{% highlight c++ %}
+cout << setprecision(40) << a << endl; // print 40 digits..
+{% endhighlight %}
+
+### char
+
+It takes one byte, which means there are 256 characters.
+
+>Tips: char and int can add or minus ..
+
+{% highlight c++ %}
+int a = 20;
+char b = 'Z';
+char c = a + b;
+{% endhighlight %}
+
+### bool
+
+It takes one byte.
+
+### Name of variable (identifier)
+
+> *Only* character, number and _ are ligal...
+
+#### examples:
+
+chGrade; nLength; bOnOff; strStudentName..
+
