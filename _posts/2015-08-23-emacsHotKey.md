@@ -5,8 +5,10 @@ date:   2015-08-22
 tags:
 - emacs
 ---
+* auto-gen TOC:
+{:toc}
 
-```cpp
+~~~ c
 // 测试中文代码
 // English test
 #include <iostream>
@@ -15,8 +17,7 @@ int main() {
     int i = 0;
     std::cout << i << std::endl;
 }
-```
-
+~~~
 
 ## 1-File Command
 --------
@@ -60,6 +61,7 @@ int main() {
 
 ## 6-Find and Replacement
 --------
+
 ### 6.1 Search
 - `C-s` : search forward
 - `C-r` : search backward
