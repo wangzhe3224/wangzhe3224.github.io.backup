@@ -2,6 +2,7 @@
 layout: post
 title:  Emacs Useful Hotkey
 date:   2015-08-22
+categories: emacs
 tags:
 - emacs
 ---
