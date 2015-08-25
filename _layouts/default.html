@@ -7,7 +7,11 @@
 <body>
 
 <!-- add to top function-->
-<div id="gotop"><a a href="javascript:scroll(0,0)"> Top </a></div>
+<div id="scrolltop">
+	<span class="icon">
+	  <i class="upArrow"></i>
+	</span>
+</div>
 
 <div class="container">
 
@@ -38,5 +42,40 @@
 
 </body>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+    google_ad_client = "ca-pub-9801985319378542";
+    google_ad_slot = "3033241316";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- AD -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<script type="text/javascript">
+var $scrolltopBtn = $('#scrolltop'),
+    _timeoutId;
+$(window).scroll(function () {
+  if(_timeoutId){
+    clearTimeout(_timeoutId);
+  }
+  _timeoutId =  setTimeout(function(){
+      if ($(this).scrollTop() > 100) {
+        $scrolltopBtn.fadeIn();
+      } else {
+        $scrolltopBtn.fadeOut();
+      }
+    }, 100);
+});
+$scrolltopBtn.click(function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 800);
+  return false;
+});
+</script>
 
 </html>

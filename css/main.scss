@@ -3,12 +3,48 @@
 ---
 @charset "utf-8";
 // add to top css
-#backtop {
-    position:fixed;
-    _position:absolute;
-    margin-left:500px; /*座标、距离酌情而定*/
-    left:50%;
-    bottom:30px;
+#scrolltop{
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 4px;
+	position: fixed;
+	bottom: 20px;
+	right: 220px;
+	cursor: pointer;
+	-webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+#scrolltop:hover{
+	background-color: rgba(225,53,141,0.8);
+}
+span.icon {
+	height: 32px;
+	width: 32px;
+	position: relative;
+	margin: 8px 8px 3px;
+	overflow: hidden;
+	display: inline-block;
+}
+i.upArrow {
+	height: 0px;
+	width: 0px;
+	border-width: 16px;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+	position: absolute;
+	bottom: 16px;
+	left: 0;
+}
+i.upArrow:after {
+	content: '';
+	width: 12px;
+	height: 16px;
+	background-color: #fff;
+	position: absolute;
+	top: 16px;
+	right: -6px;
 }
 
 
