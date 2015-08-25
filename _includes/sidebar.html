@@ -1,5 +1,16 @@
 <div class="col-sm-2">
 {% include Aboutme.html %}
+<!-- add search box.-->
+     <div class="trigger">
+        {% for page in site.pages %}
+          {% if page.title == 'Search' %}
+            <form action="{{ '/search' | prepend: site.baseurl }}" method="GET">
+              <label for="query">Search:</label>
+              <input type="text" name="query" placeholder="Enter your search term">
+            </form>
+          {% endif %}
+        {% endfor %}
+      </div>
 {% include Tags.html %}
 {% include Categories.html %}
 {% include Archives.html %}

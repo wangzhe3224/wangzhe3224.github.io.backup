@@ -2,6 +2,15 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+// add to top css
+#backtop {
+    position:fixed;
+    _position:absolute;
+    margin-left:500px; /*座标、距离酌情而定*/
+    left:50%;
+    bottom:30px;
+}
+
 
 // Our variables
 $base-font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;

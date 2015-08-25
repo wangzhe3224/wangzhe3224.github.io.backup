@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="home">
-<div id="gotop"><a a href="javascript:scroll(0,0)"> Top </a></div>
+<!--<div id="gotop"><a a href="javascript:scroll(0,0)"> Top </a></div>-->
   <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
     
     {% for post in paginator.posts %}
@@ -32,7 +32,8 @@ layout: default
 
     <article class="post-content" itemprop="articleBody">
       {{ post.content }}
-    </article> <hr />
+    </article> 
+    <hr />
     
     {% endfor %}
   
