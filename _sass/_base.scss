@@ -31,7 +31,7 @@ body {
    bottom: 20px;
    padding: 10px 15px;
    font-size: 30px;
-   background: #fff;
+   background: #ECECEC;
    color: white;
    cursor: pointer;
 }
@@ -64,7 +64,7 @@ ul, ol, dl, figure,
   padding-left: $spacing-unit;
   padding-top:30px;
 
-  background-color:#fff;
+  background-color:#F5F5F5;
   margin-top:20px;
   margin-bottom:30px;
   box-shadow: 1px 1px 10px #BBB;
@@ -208,7 +208,7 @@ blockquote{
 pre,code {
   font-size: 15px;
   border-radius: 3px;
-  background-color: $code-backgroud-color;
+  background-color: #494949;
   color: $code-font-color;
 }
 
@@ -323,7 +323,7 @@ table tr th :last-child, table tr td :last-child { margin-bottom: 0; }
 hr{
   margin-bottom: 30px;
   border: 0;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #2583AD;
 }
 
 cite{ 

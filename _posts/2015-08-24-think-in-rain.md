@@ -2,6 +2,7 @@
 layout: post
 title:  一个雨天的想法
 date:   2015-08-24
+categories: life
 comments: true
 tags:
 - thinking
