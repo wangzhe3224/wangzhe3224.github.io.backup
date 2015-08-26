@@ -1,28 +1,10 @@
----
-layout: page
-title: Search
-permalink: /search/
----
-
-
-<div id="results">
-	
+<div class="sidebar-module">
+   {% for page in site.pages %}
+       {% if page.title == 'Search' %}
+            <form action="{{ '/search' | prepend: site.baseurl }}" method="GET">
+              <label for="query">Search:</label>
+              <input type="text" name="query" placeholder="Enter your search term">
+            </form>
+       {% endif %}
+   {% endfor %}
 </div>
-
-<script>
-	var JEKYLL_POSTS = [];
-	{% for post in site.posts %}
-	JEKYLL_POSTS.push({
-		title: "{{ post.title }}",
-		link: "{{ post.url | prepend: site.baseurl }}",
-		content: "{{ post.content | strip_newlines | strip_html }}"
-	}); 
-    {% endfor %}
-</script>
-<script src="{{ "/js/search.js" | prepend: site.baseurl }}"></script>
-<script>
-	new jekyllSearch({
-		selector: "#results",
-		properties: ["title", "content"]
-	});
-</script>

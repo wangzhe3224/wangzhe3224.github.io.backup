@@ -1,22 +1,11 @@
 <div class="col-sm-2">
 {% include Aboutme.html %}
 <!-- add search box.-->
-<div class="sidebar-module">
-   {% for page in site.pages %}
-       {% if page.title == 'Search' %}
-            <form action="{{ '/search' | prepend: site.baseurl }}" method="GET">
-              <label for="query">Search:</label>
-              <input type="text" name="query" placeholder="Enter your search term">
-            </form>
-       {% endif %}
-   {% endfor %}
-</div>
-{% include Recent_Posts.html %}
-{% include Tags.html %}
 {% include Categories.html %}
+{% include ad.html %}
+{% include Tags.html %}
+{% include Recent_Posts.html %}
 {% include Archives.html %}
 {% include Blogroll.html %}
 {% include Copyright_Notice.html %}
-
-
 </div>
