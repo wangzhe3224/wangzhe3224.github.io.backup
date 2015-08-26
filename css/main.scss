@@ -4,16 +4,12 @@
 @charset "utf-8";
 // add to top css
 #scrolltop{
-<<<<<<< HEAD
-    z-index: 100;
-=======
 	z-index: 100;
->>>>>>> ea45a222dea0a460a7e79145511e1eb75a7b4575
 	display: none;
 	background-color: rgba(0,0,0,0.3);
 	border-radius: 4px;
 	position: fixed;
-	bottom: 20px;
+	bottom: 150px;
 	right: 220px;
 	cursor: pointer;
 	-webkit-transition: background-color 0.5s ease;
