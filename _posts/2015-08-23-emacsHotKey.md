@@ -76,6 +76,15 @@ int main() {
 ### 6.2 Relpace
 - `M-% string RET newstring RET`
 
+If there is a marked region in the buffer, the command will only replace the string shows in the marked region.
+
+>
+`y` or `space`: replace current string   
+`n` or `del`  : cancel the replace of the current string  
+`^`           : back to the previous string        
+`!`           : **replace every matched string**   
+`ESC`         : quit replace command    
+
 ## 7-Other useful command
 - `M-x indent-region` : Indents the region. **Very handy**
 
