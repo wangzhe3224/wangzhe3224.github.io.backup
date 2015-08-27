@@ -82,7 +82,7 @@ public:
 ```  
 What if we have another overload func()? How to make friend with them?  
 Basiclly, we do this:  
-```cpp
+~~~cpp
 extern void func(int n);
 extern void func();// func is overloaded
 class A {
@@ -90,13 +90,13 @@ public:
     friend void func();// this only makes friend with the non parameter version..
     friend void func(int n); // this makes friend with the overload version.
 };
-```  
+~~~
 
 The conclusion is we have to specify which one of the overloaded functions we want to make a friend.
 
 By the way, a friend declaration affects access but is not a declaration in an ordinary sense. Look at this: [C++ Primer 5th](http://www.amazon.com/Primer-5th-Edition-Stanley-Lippman/dp/0321714113)
 
-```cpp
+~~~cpp
 struct X {
     friend void f() { /* friend function can be defined in the classbody   */ }
     X() { f(); } // error: no declaration for f
@@ -106,7 +106,7 @@ struct X {
 void X::g() { return f(); } // error: f hasn't been declared
 void f();                   // declares the function defined inside X
 void X::h() { return f(); } // ok: declaration for f is now in scope
-```
+~~~
 
 ### Reference
 
