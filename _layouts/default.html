@@ -12,6 +12,7 @@
 	  <i class="upArrow"></i>
 	</span>
 </div>
+<!-- add to top function-->
 
 <div class="container">
 
@@ -39,11 +40,10 @@
   {% include footer.html %}
 
 </div>
-
 </body>
 
+<!-- 滚动特效 -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
 <script type="text/javascript">
 var $scrolltopBtn = $('#scrolltop'),
     _timeoutId;
@@ -62,11 +62,12 @@ $(window).scroll(function () {
 $scrolltopBtn.click(function () {
   $('body,html').animate({
     scrollTop: 0
-  }, 800);
+  }, 400);
   return false;
-});
-</script>
+});</script>
+<!-- 滚动特效 -->
 
+<!-- google analytic -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -75,7 +76,6 @@ $scrolltopBtn.click(function () {
 
   ga('create', 'UA-66629043-2', 'auto');
   ga('send', 'pageview');
-
 </script>
-
+<!-- google analytic -->
 </html>
