@@ -15,17 +15,19 @@ tags:
 ## 1. What is a **Constructor**
 
 **Defination:**
+
 >
 Constructors are *special member function(s)* of the related class. The job of a constructor is to **initialize the data members** of a class object. A constructor is run whenever an object of a class type is **created**.
 Constructors handles what will happen when a object of a class type is created.
 
 **Tips:**
+
 >
 A class also have other kinds of construtors to handle different behaviours of an object of a class type.  
-- Creating object: **constructor**
-- Moving object  : **moving construtor**
-- Copy object    : **copy construtor**
-- Destroy object : **destructor**....well.. this is a De-constructor....
+- Creating object: **constructor**  
+- Moving object  : **moving construtor**  
+- Copy object    : **copy construtor**  
+- Destroy object : **destructor**....well.. this is a De-constructor....  
 
 Constructors don't have return value.
 
