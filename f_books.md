@@ -14,14 +14,13 @@ permalink: /books/
 
 ### 1. C++ Primer(5th)
 
-- [C++ Primer 5th Answers(Under going)](https://github.com/wangzhe3224/cxxPrimer5th) 
-
+- [C++ Primer 5th Answers(Under going)](https://github.com/wangzhe3224/cxxPrimer5th)   
+### 2. Date Structure and Algorithm Analysis in C++ (6th)
 
 ## `计划阅读`
 
 <hr>
 
-### 1. Algorithm in C++ (Part 1-4)
 
 
 ## `已经读过`

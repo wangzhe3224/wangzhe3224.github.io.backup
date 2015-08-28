@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<meta property="og:title" content="Search">
+<title>Search</title>
+<meta property="og:description" content="Programming, structures and life.">
+<meta property="og:url" content="http://wangzhe3224.github.io//search/">
+<meta property="og:site_name" content="Coding Life">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title" content="Search">
+<meta name="twitter:description" content="Programming, structures and life.">
+<meta name="twitter:url" content="http://wangzhe3224.github.io//search/">
+
+<meta name="keywords" content="c++, algorithm, structures, python">
+
+<link rel="icon" href="/images/Linux.png">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="http://wangzhe3224.github.io//search/">
+<link rel="alternate" type="application/atom+xml" title="Coding Life" href="http://wangzhe3224.github.io//feed.xml" />
+
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</head>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66629043-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body>
+
+<!-- add to top function-->
+<div id="scrolltop">
+	<span class="icon">
+	  <i class="upArrow"></i>
+	</span>
+</div>
+<!-- add to top function-->
+
+<div class="container">
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <h1 class="site-title">Coding Life</h1>
+    <!--<h3 class="site-meta"></h3>-->
+
+    <nav class="site-nav">
+      <div class="trigger">
+        
+        
+            <a class="page-link" href="/">Home</a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/archives/">Archives</a>
+        
+        
+        
+            <a class="page-link" href="/categories/">Categories</a>
+        
+        
+        
+            <a class="page-link" href="/tags/">Tags</a>
+        
+        
+        
+            <a class="page-link" href="/books/">Books</a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/leaveMessage/">Leave Message</a>
+        
+        
+        
+            <a class="page-link" href="/index.html"></a>
+        
+        
+        
+            <a class="page-link" href="/css/main.css"></a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/page2/index.html"></a>
+        
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    
+
+  <div class="page-content col-sm-8">
+    <div id="results">
+	
+</div>
+
+<script>
+	var JEKYLL_POSTS = [];
+	
+	JEKYLL_POSTS.push({
+		title: "Lvalue and rvalue",
+		link: "/c++/2015/08/28/lvalue-and-rvalue.html",
+		content: "An lvalue is an expression that identifies a non-temporary object. An rvalue is an expression that identifies a temporary object or is a value (such as a literal constant) not associated with any object.Tips  if an object has a name, it is an lvalueLook at following codes:vector&lt;string&gt; arr(3);  // arr is *lvalue*const int a = 100;      // a is *lvalue*, 100 is rvaluedouble b;               // b is *lvalue*std::string str = &quot;rvalue.&quot;; // str is *lvalue*, &quot;rvalue&quot; is rvaluedouble *p = &amp;b;         // p is *lvalue*,Here we talk something about lvalue and rvalue reference. You can check Reference in c++ to know somethin about reference."
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Constructor in c++",
+		link: "/c++/2015/08/26/constructor.html",
+		content: "  1. What is a Constructor  2. How do construtor work  3.Categories of Constructors1. What is a ConstructorDefination:  Constructors are special member function(s) of the related class. The job of a constructor is to initialize the data members of a class object. A constructor is run whenever an object of a class type is created.Constructors handles what will happen when a object of a class type is created.Tips:  A class also have other kinds of construtors to handle different ways of creating an object of a class type.- Creating object: (normal?)constructor, it creats object by initializers.  - Moving object  : moving construtor, it creats object by copying another object with the same type.     - Copy object    : copy construtor,  it creats object by moving anthter object wiht the same type.      Constructors don’t have return value.        default constructor is a constructor without any non-default parameter.  2. How do construtor workIf we do not explicitly initialize a member in the constructor initializer list, that member is default initialized before the constructor body starts executing.3.Categories of Constructors  Default constructor: The default constructor is one that takes no arguments.  Synthesized default constructor : The default constructor generated by the compiler.  Delegating constructor : A delegating constructor uses another constructor from its own class to perform its initialization. It is said to “delegate” some (or all) of its work to this other constructor.  Converting constructor : Every constructor which can be called with one non-default parameter without specifier explicit. This constructor defines a implicit conversion to the class type"
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Answers to C++ Primer 5th and Primer Plus 6th",
+		link: "/c++/2015/08/26/cppPrimerAnswers.html",
+		content: "  C++ Primer 5th Answers  C++ Primer Plus 6th Answers还在继续整理….希望大家能够一起完善…."
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Function Overload",
+		link: "/c++/2015/08/25/function-overload.html",
+		content: "  1. What is function overload  2. Overloading and const  3. Avoidint ambiguous overload  4. Overload of a member function  5. Overload and friend  Reference1. What is function overload  Functions that have the same name but different parameter lists and that appear in the same scope are overloaded.Here we can see, Thress key points:  Same name  Different parameter list  In the same groupCan not define function overload if the these function only differ in the return type.In C++, name lookup happens before type checking.Record lookup(const Account&amp;);bool lookup(const Account&amp;);   // error: only the return type is different2. Overloading and const  function ignores top level const:Record lookup(Phone);  Record lookup(const Phone);   // redeclares Record lookup(Phone)  Record lookup(Phone*);  Record lookup(Phone* const);  // redeclares Record lookup(Phone*)    But low level const makes difference :Record lookup(Account&amp;);       // function that takes a reference to Account  Record lookup(const Account&amp;); // new function that takes a const reference3. Avoidint ambiguous overload      Compiler will try to do conversion if it can not find a best match.        Inline Functions Avoid Function Call Overhead  4. Overload of a member function  C++ Primer:We can overload a member function based on whether it is const for the same reasons that we can overload a function based on whether a pointer parameter points to const.const MyClass &amp;func() const: means member function func() will not change the calling object, in other words *this is const.A const after the function declararion means the function is not allowed to change any class members (except for members marked mutable)RefMyClass &amp;func() is a overload version, which is a nonconst version.5. Overload and friendA class can make a function as a friend, so that the friend function can accsee even the private members of the class. We can do like this:cppextern void func();class A {public:    friend void func();// make a friend with `func()`    ...};What if we have another overload func()? How to make friend with them?Basiclly, we do this:~~~cppextern void func(int n);extern void func();// func is overloadedclass A {public:    friend void func();// this only makes friend with the non parameter version..    friend void func(int n); // this makes friend with the overload version.};~~~The conclusion is we have to specify which one of the overloaded functions we want to make a friend.By the way, a friend declaration affects access but is not a declaration in an ordinary sense. Look at this: C++ Primer 5thstruct X {    friend void f() { /* friend function can be defined in the classbody   */ }    X() { f(); } // error: no declaration for f    void g();    void h();};void X::g() { return f(); } // error: f hasn't been declaredvoid f();                   // declares the function defined inside Xvoid X::h() { return f(); } // ok: declaration for f is now in scopeReference  What is the meaning of a const at end of a member function?"
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Reference in C++",
+		link: "/c++/2015/08/25/reference-and-pointer.html",
+		content: "  1.What is reference?  2. Define a reference  3. Why to Use reference  4. When to Use reference          4.1 As function parameters      4.2 As function return value      4.3 reference-to-functions        5. Reference and const  6. Advices in using reference  7. References1.What is reference?Reference is an alias (an alternate name) for an existing object. But reference is not a pointer to the object, it is actually the object itself.Here we mainly discuss lvalue referenceLvalue and rvalue discussed something about lvalue and rvalue.      A reference-to-someType points to the same memory location which the refeeing object uses.        Reference is not actually a variable.        Reference is a lvalue        Reference can not rebound.        A reference must be initialized when declaring it.        A reference can only does things that the refering object can do.        A reference is inherently a const!  2. Define a referenceDeclare and initialize of a reference-to lvalue:&lt;type&gt; &amp; &lt;name&gt; = existingObj;where, &lt;type&gt; is a type and &lt;name&gt; is an identifier whose type is lvalue reference-to-&lt;type&gt;.In c++ 11 there is a new feature called rvalue reference:&lt;type&gt; &amp;&amp; &lt;name&gt; = existingObj;where, &lt;type&gt; is a type and &lt;name&gt; is an identifier whose type is rvalue reference-to-&lt;type&gt;.   Declaration in C++. ref      A declaration consist two parts: specifiers and declarators.A declarator is the name being declared, possibly surrounded by operators such as *, &amp;, [], and (). The * operator in a declarator means “pointer to,” &amp; means “reference to,” and [] means “array of.”    e.g.Declarator *a[N] means array with N elements of type pointer-to, rather than, pointer to a array of N elements. Because [] has higher precedence than *.perecedence in c++ (*a)[N] means pointer to a array of N elements.  e.g.char *f(int) is a function returns a pointer-to char.char (*f)(int) is pointer-to function which returns a char.The operator &amp; has the same precedence as *, thuschar &amp;f(int) is a function returns a reference-to char.char (&amp;f)(int) is a reference-to function which returns a char.Reference-to constint const &amp;i = n or const int &amp;i = n(they are equivalent)The specifier const modifies the int to a const int. The delaration declare that i is a reference-to const int. This expression has following structure:  &amp;i represent i is a reference-to  const int represents a typeAfter than declaration, i represents a const int object n. We can not chage i because it represents a const int.Examples:int a = 5;int &amp;ra = a; Here, ra has the type of “reference-to int”.int&amp; func();func() is a function that returns a “reference-to int”.int&amp; func(int&amp;);func() is a function with a reference parameter and return a reference.  This also called pass-by-reference which frequently used in function.class Myclass {int &amp;_x;//};Myclass is a class with a reference-to int type.int func() {return 42;}int (&amp;xFunc)() = func;xFunc is an alias for func.const int &amp;r = 65;r is a const reference-to int which points a memory storage of value 65.  Only const reference-to can be assigned a literal.3. Why to Use referenceReference works similarly to pointers but easier to use.The orinial reason of introducing reference is that reference types enable overloaded operators to look like built-in operators, as well as act like them.    void f1(const complex* x, const complex* y) // without references    {        complex z = *x+*y;  // ugly        // ...    }    void f2(const complex&amp; x, const complex&amp; y) // with references    {        complex z = x+y;    // better        // ...	}Ref4. When to Use referencePass reference to the function will not invoke copy, which means pass-by-reference is more efficient!4.1 As function parametersvoid swap(int &amp;i, int &amp;j){    int tmp = i;	i = j;	j = tmp;}int main() {    int i = 1, j = 2;	swap(i,j); // now i = 2, j = 1}Here we use call-by reference to change the value of the argument.We can also use call by reference-to-const to ensure the funciton cannot chage the passing parameters.4.2 As function return valueWhen a function returns a reference, the function call can appear on the left hand of the assignment operator.class Array {public:  int size() const;  float&amp; operator[] (int index);};int main(){  Array a;  for (int i = 0; i &lt; a.size(); ++i)    a[i] = 7;    // This line invokes Array::operator[](int)}RefWith this ability, we have method chaining:MyObj.method1().method2()MyObj.method1() will return a reference to MyObj which makes the second method2() invoked.4.3 reference-to-functionsNormally, you can not pass a function to another function. But you can pass a reference-to-function to a function!#include &lt;iostream&gt;void funcCaller (void (&amp;func)(int), int x) {    func(x);}void func(int x) {    std::cout &lt;&lt; &quot;func(x) is called by funcCaller.\n&quot;;    std::cout &lt;&lt; &quot;x = &quot; &lt;&lt; x;   }int main() {   funcCaller(func,20);   }// Output:// func(x) is called by funcCaller.// x = 205. Reference and constYou can declare either a pointer-to const(lowlevel const)   or const pointer (toplevel const).You can only define reference-to const(which is similar to lowlevel const).6. Advices in using reference  call-by-value or call-by-ref?      If you want to change the object passed, call by reference or use a pointer; e.g., void f(X&amp;); or void f(X*);.    If you don’t want to change the object passed and it is big, call by const reference; e.g., void f(const X&amp;);.    Otherwise, call by value; e.g. void f(X);        Always initialize the reference        Avoid using references to variables whose memory are dynamically allocated as it might create unnecessary confusion regarding the clean-up of that memory.        References cannot be null.  7. References  Reference (C++)  What is a reference variable in C++?  References  An Introduction to References  How to Use C++ Reference Variables  C++ References  References and const"
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Increment/Decrement operators",
+		link: "/c++/2015/08/25/++i-i++.html",
+		content: "  1. What do they do  2. Why  3. Define increment operator  4. c++ style  Reference:There are two kinds of increment/decrement operator : ++,--.There are two forms: prefix and postfix.1. What do they do  prefix form ++i/--i will increment/decrement the vlaue of i, then then return the incremented value. i = 1; j = ++i; (i is 2, j is 2)  postfix form i++/i-- will also increment/decrement the value of i, but returns the original value of i before increment. i = 1; j = i++; (i is 2, j is 1)Reference:2. WhyWhy they are different? Let’s look at the essence of these operators.  ++i ==&gt; T&amp; operator++(T&amp; a)  --i ==&gt; T&amp; operator--(T&amp; a)  i++ ==&gt; T operator++(T&amp; a, int)  i-- ==&gt; T operator--(T&amp; a, int)Now, we understand what happens. prefix form actually returns a reference of the calling object, while postfix returns the value of call object.  Because a temporary copy of the object is constructed during post-increment and post-decrement, pre-increment or pre-decrement operators are usually more efficient in contexts where the returned value is not used.3. Define increment operatorLook at following program:class Integer{    public:    Integer&amp; operator++() {        x_ += 1;        return this;        }    const Integer operator++(int) {        Integer tmp = *this; // need copy the object, slow down the speed.        ++*this;        return tmp;    }        private:    int x_;};4. c++ styleUsually, in c++ we use prefix form.Reference:  What is the difference between ++i and i++  Increment/decrement operators  Pre-increment or post-increment in C/C++"
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "一个雨天的想法",
+		link: "/life/2015/08/24/think-in-rain.html",
+		content: "  一  生活  二 未来          ×兴趣      ×性格      ×行业      ×个人        三 总结来到伦敦已经5个多月了，有不少感受，都记下来。一  生活我住在泰晤士河南岸，一个叫做Brixton的地方，是一个主要由非洲黑人和加勒比人组成的社区。Brixton这个名字源于Brixistane，意为Brixi的石头（Brixi是撒克逊的领主）。这里的黑人比想象中的要友好很多，热爱音乐，喜欢各种奇奇怪怪的发型。我的窗外伦敦整个城市给我的感觉是比较多元的，这里充满了世界各地的文化，街道上充满了各种肤色的人，能听到来自很多国家的语言。这是因为这个，伦敦几乎接受所有的文化。每一个人都能找到自己想要的东西，如果你想你都可以在这个城市找到自己的位置。我也是因为这个爱上伦敦，因为它让我觉得自由，觉得生活其实可以比你想象的多彩。多彩的伦敦伦敦街头的艺人是伦敦的一大风景线！他们技术纯熟，水平很高。音乐，美术等等。壁画伦敦人的工作时间比较短，下午会早早下班，周末更是很少加班。我办公室有一个美国人，他来伦敦的原因就是觉得这里的工作比较惬意，没有那么大的压力。二 未来我是一个懒人，国内大学结构工程博士在读，很少计划将来。想想自己读博士的经历，也是机缘巧合，当时有一个读博士的机会，而且时间紧迫，没来得及多想就读了博士。如今一晃，已经是博士3年纪了。可就是在这出国的半年里面，我却萌生了转行的念头：我想做IT。自己也犹豫过，因为已经在一个领域读到了博士，已经投入了极大的时间成本。从19岁读大学到28岁博士毕业，7年多的时间，几乎是人生最有活力的7年时间。现在转行，其实毫无优势科研。可是我为什么要转行？×兴趣小时候我就比较喜欢计算机，喜欢硬件更喜欢写程序，IT更加吸引我的是所谓的开源以及黑客精神。在黑客世界里，各组织的精神与文化都是不相同的，但有一个共同点就是对技术的崇拜与对创新的不断追求。大学本科基本上没有好好学习什么东西，大部分时间都在玩游戏。直到上了研究生，我开始接触科学研究，计算机程序变得越来越重要。我渐渐发现，我更加喜欢写代码，研究软件以及操作系统，享受掌控计算机的感觉。别人喜欢手工做的东西，我喜欢写成程序;课题组里面有人电脑出了问题，大部分时候也是我帮忙解决。我喜欢IT。×性格我是个内向性格的人，活在自己的世界里面压力比较小。喜欢自己安静的做事情，耐得住寂寞，有时候甚至喜欢寂寞，所以我想太过于需要社交的工作可能是不适合我的。做程序员恰恰是需要交际叫少的行业，大部分时间我们在与计算机打交道，计算机是没有感情的，但是它们为命是重。×行业我博士做的属于土木工程领域，不得不承认，这是一个门槛很低的行业，从业者的待遇并不高。而IT行业依托与计算机与互联网是一个不断更新升级的行业，是一个有活力的领域。以下数据来自：Indeed（伦敦地区）            程序员：薪水      工作数量      土木工程：薪水      工作数量                  £30,000+      (1835)      £30,000+      (1972)              £50,000+      (860)      £50,000+      (738)              £70,000+      (285)      £70,000+      (161)              £90,000+      (103)      £90,000+      (62)              £110,000+      (44)      £110,000+      (17)      总体上，程序员在英国有更多的工作机会，也有更多的机会获得更高的薪水。×个人我并不是因为现在做的不好，才想要转行。作为一个博士，我想我的成果和成绩应该算比较丰富的，感兴趣可以看我之前的博客。虽然不是最好，但回国找一个称心如意的工作还是不困难的。为什么还是要转？因为我想要留在伦敦，我喜欢这城市的氛围，自由多元。然而我的专业是土木工程，中国和英国有较大差别。如果还是从事本专业，留下来相对困难一些。土木工程在英国并不是一个很蓬勃的行业，这是一个老迈的国家了。即使是中国，从我知道的消息看到，各大设计公司也都开始裁员或者不招聘新人。市场似乎有些饱和。IT则是另一种景象。虽然我知道做IT其实很辛苦，可是做那一行不辛苦？做设计师同样是天天加班，收入却赶不上同样工作量的IT产业，若非兴趣使然，为什么要做？？三 总结伦敦很丰富多彩，如果有机会，我会留在这里享受这里。换一个行业，换一种生活，未尝不是一件好事。谁的人生都只有一次，怎么过，都是自己决定的。如果想做什么事情的话，就去做，因为我还年轻。现在已经考过了雅思，系统的自学c++和算法，希望明年博士顺利毕业，然后来英国申请学校读计算机硕士。为自己留下来增加筹码。最后引用一句话：  Talk is cheap, Just do it.完"
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Welcome to My place",
+		link: "/life/2015/08/22/welcome.html",
+		content: "Welcome to My Blog!I am a PhD canditate in Structure engineering, I like coding.I used to use this blog to present my projects. Now I am tring to be a coder…So I build site to write my coding life…"
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Emacs Useful Hotkey",
+		link: "/emacs/2015/08/22/emacsHotKey.html",
+		content: "  1-File Command  2-Copy/Cut/Paste Command  3-Cursor Command  4-Redo/Undo Command  5-Buffer Management Comment  6-Find and Replacement          6.1 Search      6.2 Relpace        7-Other useful command// 测试中文代码// English test#include &lt;iostream&gt;int main() {    int i = 0;    std::cout &lt;&lt; i &lt;&lt; std::endl;}1-File Command  C-x C-f : Opens a file, asks for the file name. If it cannot find the file, creates the file  C-x C-w : Save as…  C-x C-s : Saves the file without a prompt  C-x s   : Saves all files with a prompt  C-s C-w : Saves the file with a different name. Asks you for the name.  C-x C-c : Exit  M-x recover-file : recovers the auto-saved file.2-Copy/Cut/Paste Command  C-space : Marking by moving the cursor  C-y     : Paste  c-k     : Delete line  C-w     : Cut  M-w     : Copy3-Cursor Command  C-a : Begin of line  C-e : End of line  M-&gt; : End of buffer  M-&lt; : Begin of buffer4-Redo/Undo Command  C-/ : Undo  C-g C-/ : Redo5-Buffer Management Comment  C-x b  : Switch buffer  C-x C-b: Switch buffer with showing all the opening buffers  C-x 0  : Close current window  C-x 1  : Leave only one window  C-x 2  : Horizontal split window  C-x 3  : Vertical split window  C-x o  : Switch form different windows.6-Find and Replacement6.1 Search  C-s : search forward  C-r : search backward  C-s RET : nonincremental search forward  C-r RET : ditto  C-M-s : regular expression search forward  C-M-r : … backward  Using M-n or M-p to reuse previous key words.6.2 Relpace  M-% string RET newstring RETIf there is a marked region in the buffer, the command will only replace the string shows in the marked region.  y or space: replace current string n or del  : cancel the replace of the current string^           : back to the previous string      !           : replace every matched string ESC         : quit replace command7-Other useful command  M-x indent-region : Indents the region. Very handy"
+	}); 
+    
+	JEKYLL_POSTS.push({
+		title: "Learn C #1",
+		link: "/c++/2015/07/27/clearning%231.html",
+		content: "There are four components in a programming language:1. data;2. operation;3. control flow;4. input and output.We start with the first part: data.  tips: when you define a variable, it’s better to give it a initial value.basic data type:      char        int        float        bool    Tips: You can use ‘Tpyename variableName’ to define a certain type of variable.intint a = -123;cout &lt;&lt; hex &lt;&lt; a &lt;&lt; endl;//print hex number..cout &lt;&lt; oct &lt;&lt; a &lt;&lt; endl;//print oct number..cout &lt;&lt; dec &lt;&lt; a &lt;&lt; endl;//pring dec number. you must do this,,or it will print oct ..//Then we can input a hex number..int b = 0xFFFFF85; // a hex numberint c = 033333232; // a oct numbercout &lt;&lt; dec &lt;&lt; b &lt;&lt; endl;float  float - 4 byte - precise: 8  double - 8 byte - precise: 15  long double - 8 byte - precise: 15cout &lt;&lt; setprecision(40) &lt;&lt; a &lt;&lt; endl; // print 40 digits..charIt takes one byte, which means there are 256 characters.  Tips: char and int can add or minus ..int a = 20;char b = &#39;Z&#39;;char c = a + b;boolIt takes one byte.Name of variable (identifier)  Only character, number and _ are ligal…examples:chGrade; nLength; bOnOff; strStudentName.."
+	}); 
+    
+</script>
+<script src="/js/search.js"></script>
+<script>
+	new jekyllSearch({
+		selector: "#results",
+		properties: ["title", "content"]
+	});
+</script>
+
+    <section class="pager">
+  
+  
+</section>
+
+
+  </div>
+  <div class="col-sm-2">
+<div class="sidebar-module about">
+  <h4>About Me</h4>
+  <img title="Wang Zhe" src="/images/myphoto.png" alt="Wang Zhe"/>
+  <span>Coding life.</span>
+  <br />
+
+  
+
+  You can contact me via:
+
+  
+  <a href="mailto:wangzhetju@gmail.com" title="mailto: wangzhetju@gmail.com">Email</a> or
+  
+  
+  <a href="https://github.com/wangzhe3224" title="GithubID: wangzhe3224">Github</a>
+  
+
+  
+  <p></p>
+  <a href="/feed.xml"> Subscribe me </a>
+</div>
+
+<!-- add search box.-->
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  
+  <li><a href="/categories/#c++" title="c++" rel="7">c++ (7)</a></li>
+  
+  <li><a href="/categories/#emacs" title="emacs" rel="1">emacs (1)</a></li>
+  
+  <li><a href="/categories/#life" title="life" rel="2">life (2)</a></li>
+  
+</div>
+
+
+<div class="sidebar-module">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad3 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:200px"
+     data-ad-client="ca-pub-9801985319378542"
+     data-ad-slot="9930726111"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</script>
+</div>
+
+<div class="sidebar-module">
+  <h4>Tags</h4>
+  
+    <a href="/tags/#c++" title="c++" rel="6">c++(6)</a> &nbsp;
+  
+    <a href="/tags/#emacs" title="emacs" rel="1">emacs(1)</a> &nbsp;
+  
+    <a href="/tags/#welcome" title="welcome" rel="1">welcome(1)</a> &nbsp;
+  
+    <a href="/tags/#thinking" title="thinking" rel="1">thinking(1)</a> &nbsp;
+  
+    <a href="/tags/#operator" title="operator" rel="1">operator(1)</a> &nbsp;
+  
+    <a href="/tags/#reference" title="reference" rel="3">reference(3)</a> &nbsp;
+  
+    <a href="/tags/#pointer" title="pointer" rel="2">pointer(2)</a> &nbsp;
+  
+    <a href="/tags/#function" title="function" rel="1">function(1)</a> &nbsp;
+  
+    <a href="/tags/#overload" title="overload" rel="1">overload(1)</a> &nbsp;
+  
+    <a href="/tags/#answer" title="answer" rel="1">answer(1)</a> &nbsp;
+  
+    <a href="/tags/#constructor" title="constructor" rel="1">constructor(1)</a> &nbsp;
+  
+    <a href="/tags/#class" title="class" rel="1">class(1)</a> &nbsp;
+  
+    <a href="/tags/#lvalue" title="lvalue" rel="1">lvalue(1)</a> &nbsp;
+  
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Recent Posts</h4>
+  
+  <li>
+  <a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue" >Lvalue and rvalue</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/constructor.html" title="Constructor in c++" >Constructor in c++</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th" >Answers to C++ Primer 5th and Primer Plus 6th</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/function-overload.html" title="Function Overload" >Function Overload</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/reference-and-pointer.html" title="Reference in C++" >Reference in C++</a>
+  </li>
+  
+</div>
+
+<div class="sidebar-module">
+  <h4>Archives</h4>
+
+  
+  
+  
+  
+  
+  <li id="2015" > <a href="/archives/#2015">2015</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Blogroll</h4>
+  
+  <li><a href="http://wangzhetju.wix.com/wangzhe" title="My blog">wangzhe3224</a></li>
+  
+</div>
+
+
+<div class="sidebar-module"> <!-- sidebar-module-inset">-->
+</div>
+
+
+</div>
+
+
+  
+
+  <footer class="site-footer">
+
+  <p>Copyright &copy; <a href="/">Coding Life</a></p>
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+  on 
+  
+  <a href="https://github.com/">Github</a>
+  
+
+</footer>
+
+
+</div>
+</body>
+
+<!-- 滚动特效 -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+var $scrolltopBtn = $('#scrolltop'),
+    _timeoutId;
+$(window).scroll(function () {
+  if(_timeoutId){
+    clearTimeout(_timeoutId);
+  }
+  _timeoutId =  setTimeout(function(){
+      if ($(this).scrollTop() > 100) {
+        $scrolltopBtn.fadeIn();
+      } else {
+        $scrolltopBtn.fadeOut();
+      }
+    }, 100);
+});
+$scrolltopBtn.click(function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 300);
+  return false;
+});</script>
+<!-- 滚动特效 -->
+
+<!-- google analytic -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66629043-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- google analytic -->
+</html>

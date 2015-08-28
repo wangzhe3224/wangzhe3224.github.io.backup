@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<meta property="og:title" content="Reference in C++">
+<title>Reference in C++</title>
+<meta property="og:description" content="">
+<meta property="og:url" content="http://wangzhe3224.github.io//c++/2015/08/25/reference-and-pointer.html">
+<meta property="og:site_name" content="Coding Life">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title" content="Reference in C++">
+<meta name="twitter:description" content="">
+<meta name="twitter:url" content="http://wangzhe3224.github.io//c++/2015/08/25/reference-and-pointer.html">
+
+<meta name="keywords" content="c++, algorithm, structures, python">
+
+<link rel="icon" href="/images/Linux.png">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="http://wangzhe3224.github.io//c++/2015/08/25/reference-and-pointer.html">
+<link rel="alternate" type="application/atom+xml" title="Coding Life" href="http://wangzhe3224.github.io//feed.xml" />
+
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</head>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66629043-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body>
+
+<!-- add to top function-->
+<div id="scrolltop">
+	<span class="icon">
+	  <i class="upArrow"></i>
+	</span>
+</div>
+<!-- add to top function-->
+
+<div class="container">
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <h1 class="site-title">Coding Life</h1>
+    <!--<h3 class="site-meta"></h3>-->
+
+    <nav class="site-nav">
+      <div class="trigger">
+        
+        
+            <a class="page-link" href="/">Home</a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/archives/">Archives</a>
+        
+        
+        
+            <a class="page-link" href="/categories/">Categories</a>
+        
+        
+        
+            <a class="page-link" href="/tags/">Tags</a>
+        
+        
+        
+            <a class="page-link" href="/books/">Books</a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/leaveMessage/">Leave Message</a>
+        
+        
+        
+            <a class="page-link" href="/index.html"></a>
+        
+        
+        
+            <a class="page-link" href="/css/main.css"></a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/page2/index.html"></a>
+        
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    
+
+  <div class="page-content col-sm-8">
+    <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 itemprop="name" class="post-title">Reference in C++</h1>
+    <meta itemprop="keywords" content="c++,reference,pointer" />
+    <p class="post-meta">
+    Posted in
+    
+    <a href="/categories/#c++">c++</a>&nbsp;
+     
+    
+    and tagged
+    
+    <a href="/tags/#c++" title="c++">c++ </a>, 
+    
+    <a href="/tags/#reference" title="reference">reference </a>, 
+    
+    <a href="/tags/#pointer" title="pointer">pointer </a>
+    
+    
+    <time itemprop="datePublished" datetime="2015-08-25">
+    on Aug 25, 2015
+    </time>
+    </p>
+    
+  </header>
+
+  <article class="post-content" itemprop="articleBody">
+  <div id="category"></div>
+    <ul id="markdown-toc">
+  <li><a href="#what-is-reference" id="markdown-toc-what-is-reference">1.What is <em>reference</em>?</a></li>
+  <li><a href="#define-a-reference" id="markdown-toc-define-a-reference">2. Define a reference</a></li>
+  <li><a href="#why-to-use-reference" id="markdown-toc-why-to-use-reference">3. Why to Use reference</a></li>
+  <li><a href="#when-to-use-reference" id="markdown-toc-when-to-use-reference">4. When to Use reference</a>    <ul>
+      <li><a href="#as-function-parameters" id="markdown-toc-as-function-parameters">4.1 As function parameters</a></li>
+      <li><a href="#as-function-return-value" id="markdown-toc-as-function-return-value">4.2 As function return value</a></li>
+      <li><a href="#reference-to-functions" id="markdown-toc-reference-to-functions">4.3 reference-to-functions</a></li>
+    </ul>
+  </li>
+  <li><a href="#reference-and-const" id="markdown-toc-reference-and-const">5. Reference and const</a></li>
+  <li><a href="#advices-in-using-reference" id="markdown-toc-advices-in-using-reference">6. Advices in using reference</a></li>
+  <li><a href="#references" id="markdown-toc-references">7. References</a></li>
+</ul>
+
+<h2 id="what-is-reference">1.What is <em>reference</em>?</h2>
+
+<p><code>Reference</code> is an alias (an alternate name) for an <strong>existing</strong> object. But <code>reference</code> is not a pointer to the object, it is actually the object itself.</p>
+
+<p><strong>Here we mainly discuss lvalue reference</strong></p>
+
+<p><a href="">Lvalue and rvalue</a> discussed something about lvalue and rvalue.</p>
+
+<ul>
+  <li>
+    <p>A <strong>reference-to-someType</strong> points to the same memory location which the
+ refeeing object uses.</p>
+  </li>
+  <li>
+    <p>Reference is not actually a <strong>variable</strong>.</p>
+  </li>
+  <li>
+    <p>Reference is a <a href="https://en.wikipedia.org/wiki/L-value"><strong>lvalue</strong></a></p>
+  </li>
+  <li>
+    <p>Reference can not <strong>rebound</strong>.</p>
+  </li>
+  <li>
+    <p><em>A reference must be initialized when declaring it.</em></p>
+  </li>
+  <li>
+    <p>A reference can only does things that the refering object can do.</p>
+  </li>
+  <li>
+    <p>A reference is inherently a <strong>const</strong>!</p>
+  </li>
+</ul>
+
+<h2 id="define-a-reference">2. Define a reference</h2>
+
+<p>Declare and initialize of a reference-to lvalue:</p>
+
+<p><code>&lt;type&gt; &amp; &lt;name&gt; = existingObj;</code></p>
+
+<p>where, <code>&lt;type&gt;</code> is a <a href="https://en.wikipedia.org/wiki/Data_type">type</a> and <code>&lt;name&gt;</code> is an identifier whose type is <strong>lvalue reference-to-&lt;type&gt;</strong>.</p>
+
+<p>In c++ 11 there is a new feature called <strong>rvalue reference</strong>:</p>
+
+<p><code>&lt;type&gt; &amp;&amp; &lt;name&gt; = existingObj;</code></p>
+
+<p>where, <code>&lt;type&gt;</code> is a <a href="https://en.wikipedia.org/wiki/Data_type">type</a> and <code>&lt;name&gt;</code> is an identifier whose type is <strong>rvalue reference-to-&lt;type&gt;</strong>.</p>
+
+<blockquote>
+  <p><img src="http://m.eet.com/media/1074314/0102ppfig1.gif" alt="Declaration in C++" /> Declaration in C++. <a href="http://www.embedded.com/electronics-blogs/programming-pointers/4023290/References-and-const">ref</a></p>
+
+  <blockquote>
+    <p>A declaration consist two parts: <strong>specifiers</strong> and <strong>declarators</strong>.
+A declarator is the name being declared, possibly surrounded by operators such as *, &amp;, [], and (). The * operator in a declarator means “pointer to,” &amp; means “reference to,” and [] means “array of.”</p>
+  </blockquote>
+</blockquote>
+
+<ul>
+  <li>e.g.</li>
+</ul>
+
+<p>Declarator <code>*a[N]</code> means <strong>array with N elements of type pointer-to</strong>, rather than, <strong>pointer to a array of N elements</strong>. Because <code>[]</code> has higher precedence than <code>*</code>.<a href="http://en.cppreference.com/w/cpp/language/operator_precedence">perecedence in c++</a> <code>(*a)[N]</code> means <strong>pointer to a array of N elements</strong>.</p>
+
+<ul>
+  <li>e.g.</li>
+</ul>
+
+<p><code>char *f(int)</code> is a function returns a pointer-to char.</p>
+
+<p><code>char (*f)(int)</code> is pointer-to function which returns a char.</p>
+
+<p>The operator <code>&amp;</code> has the same precedence as <code>*</code>, thus</p>
+
+<p><code>char &amp;f(int)</code> is a function returns a reference-to char.</p>
+
+<p><code>char (&amp;f)(int)</code> is a reference-to function which returns a char.</p>
+
+<p><strong>Reference-to const</strong></p>
+
+<p><code>int const &amp;i = n</code> or <code>const int &amp;i = n</code>(they are equivalent)</p>
+
+<p>The specifier <code>const</code> modifies the <code>int</code> to a <code>const int</code>. The delaration declare that <code>i</code> is a <strong>reference-to const int</strong>. This expression has following structure:</p>
+
+<blockquote>
+
+  <p><code>&amp;i</code> represent <code>i</code> is a <strong>reference-to</strong> <br />
+ <code>const int</code> represents <strong>a type</strong></p>
+</blockquote>
+
+<p>After than declaration, <code>i</code> represents a const int object <code>n</code>. We can not chage i because it represents a <strong>const int</strong>.</p>
+
+<p><strong>Examples:</strong></p>
+
+<pre><code class="language-cpp">int a = 5;
+int &amp;ra = a; 
+</code></pre>
+
+<p>Here, <code>ra</code> has the type of “reference-to <code>int</code>”.</p>
+
+<hr />
+<pre><code class="language-cpp">int&amp; func();
+</code></pre>
+
+<p><code>func()</code> is a function that returns a “reference-to <code>int</code>”.</p>
+
+<hr />
+<pre><code class="language-cpp">int&amp; func(int&amp;);
+</code></pre>
+
+<p><code>func()</code> is a function with a reference parameter and return a reference.</p>
+
+<ul>
+  <li>This also called <strong>pass-by-reference</strong> which frequently used in function.</li>
+</ul>
+
+<hr />
+
+<pre><code class="language-cpp">class Myclass {int &amp;_x;//};
+</code></pre>
+
+<p><code>Myclass</code> is a class with a <code>reference-to int</code> type.</p>
+
+<hr />
+<pre><code class="language-cpp">int func() {return 42;}
+int (&amp;xFunc)() = func;
+</code></pre>
+
+<p><code>xFunc</code> is an <code>alias</code> for <code>func</code>.</p>
+
+<hr />
+<p><code>const int &amp;r = 65;</code></p>
+
+<p><code>r</code> is a <code>const reference-to int</code> which points a memory storage of value 65.</p>
+
+<ul>
+  <li>Only <code>const reference-to</code> can be assigned a literal.</li>
+</ul>
+
+<hr />
+
+<h2 id="why-to-use-reference">3. Why to Use reference</h2>
+
+<p>Reference works similarly to <a href="http://www.cplusplus.com/doc/tutorial/pointers/">pointers</a> but easier to use.</p>
+
+<p>The orinial reason of introducing reference is that reference types enable <a href="http://en.cppreference.com/w/cpp/language/operators">overloaded</a> operators to look like built-in operators, as well as act like them.</p>
+
+<pre><code>    void f1(const complex* x, const complex* y) // without references
+    {
+        complex z = *x+*y;  // ugly
+        // ...
+    }
+    void f2(const complex&amp; x, const complex&amp; y) // with references
+    {
+        complex z = x+y;    // better
+        // ...
+	}
+</code></pre>
+<p><a href="https://isocpp.org/wiki/faq/references#overview-refs">Ref</a></p>
+
+<h2 id="when-to-use-reference">4. When to Use reference</h2>
+
+<p>Pass reference to the function will not invoke copy, which means pass-by-reference is more efficient!</p>
+
+<h4 id="as-function-parameters">4.1 As function parameters</h4>
+
+<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+	<span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+	<span class="n">j</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="n">swap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">);</span> <span class="c1">// now i = 2, j = 1</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Here we use <strong>call-by reference</strong> to change the value of the argument.<br />
+We can also use <strong>call by reference-to-const</strong> to ensure the funciton cannot chage the passing parameters.</p>
+
+<h4 id="as-function-return-value">4.2 As function return value</h4>
+
+<p>When a function returns a reference, the function call can appear on the left hand of the <a href="https://en.wikipedia.org/wiki/Assignment_operator_(C%2B%2B)">assignment operator</a>.</p>
+
+<pre><code class="language-cpp">class Array {
+public:
+  int size() const;
+  float&amp; operator[] (int index);
+};
+int main()
+{
+  Array a;
+  for (int i = 0; i &lt; a.size(); ++i)
+    a[i] = 7;    // This line invokes Array::operator[](int)
+}
+</code></pre>
+<p><a href="https://isocpp.org/wiki/faq/references#overview-refs">Ref</a></p>
+
+<p>With this ability, we have <code>method chaining</code>:</p>
+
+<p><code>MyObj.method1().method2()</code></p>
+
+<p><code>MyObj.method1()</code> will return a reference to MyObj which makes the second method2() invoked.</p>
+
+<h4 id="reference-to-functions">4.3 reference-to-functions</h4>
+
+<p>Normally, you can not pass a function to another function. But you can pass a <code>reference-to-function</code> to a function!</p>
+
+<div class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;iostream&gt;</span>
+<span class="kt">void</span> <span class="nf">funcCaller</span> <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">func</span><span class="p">)(</span><span class="kt">int</span><span class="p">),</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;func(x) is called by funcCaller.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;x = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">funcCaller</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+   <span class="p">}</span>
+
+<span class="c1">// Output:</span>
+<span class="c1">// func(x) is called by funcCaller.</span>
+<span class="c1">// x = 20</span></code></pre></div>
+
+<hr />
+
+<h2 id="reference-and-const">5. Reference and const</h2>
+
+<p>You can declare either a <code>pointer-to const</code>(<a href="http://www.cplusplus.com/forum/beginner/143366/">lowlevel const</a>)   or <code>const pointer</code> (toplevel const).</p>
+
+<p>You can <strong>only</strong> define <code>reference-to const</code>(which is similar to lowlevel const).</p>
+
+<h2 id="advices-in-using-reference">6. Advices in using reference</h2>
+
+<ul>
+  <li>call-by-value or call-by-ref?</li>
+</ul>
+
+<blockquote>
+
+  <ul>
+    <li>If you want to change the object passed, call by reference or use a pointer; e.g., void f(X&amp;); or void f(X*);.</li>
+    <li>If you don’t want to change the object passed and it is big, call by const reference; e.g., void f(const X&amp;);.</li>
+    <li>Otherwise, call by value; e.g. void f(X);</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Always initialize the reference</p>
+  </li>
+  <li>
+    <p>Avoid using references to variables whose memory are dynamically allocated as it might create unnecessary confusion regarding the clean-up of that memory.</p>
+  </li>
+  <li>
+    <p>References cannot be null.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="references">7. References</h2>
+
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Reference_%28C%2B%2B%29">Reference (C++)</a></li>
+  <li><a href="http://stackoverflow.com/questions/2765999/what-is-a-reference-variable-in-c">What is a reference variable in C++?</a></li>
+  <li><a href="https://isocpp.org/wiki/faq/references#overview-refs">References</a></li>
+  <li><a href="http://www.embedded.com/electronics-blogs/programming-pointers/4024641/An-Introduction-to-References">An Introduction to References</a></li>
+  <li><a href="http://www.thegeekstuff.com/2013/05/cpp-reference-variable/">How to Use C++ Reference Variables</a></li>
+  <li><a href="http://www.cprogramming.com/tutorial/references.html">C++ References</a></li>
+  <li><a href="http://www.embedded.com/electronics-blogs/programming-pointers/4023290/References-and-const">References and const</a></li>
+</ol>
+
+
+  </article>
+  <hr />
+</div>
+
+
+<section class="pager">
+  <ul>
+    
+    <li class="previous"><a href="/c++/2015/08/25/++i-i++.html" title="Increment/Decrement operators">&larr; Older</a></li>
+    
+    
+    <li class="next"><a href="/c++/2015/08/25/function-overload.html" title="Function Overload">Newer &rarr;</a></li>
+    
+  </ul>
+</section>
+
+
+  
+
+
+    <section class="pager">
+  
+  
+</section>
+
+
+  </div>
+  <div class="col-sm-2">
+<div class="sidebar-module about">
+  <h4>About Me</h4>
+  <img title="Wang Zhe" src="/images/myphoto.png" alt="Wang Zhe"/>
+  <span>Coding life.</span>
+  <br />
+
+  
+
+  You can contact me via:
+
+  
+  <a href="mailto:wangzhetju@gmail.com" title="mailto: wangzhetju@gmail.com">Email</a> or
+  
+  
+  <a href="https://github.com/wangzhe3224" title="GithubID: wangzhe3224">Github</a>
+  
+
+  
+  <p></p>
+  <a href="/feed.xml"> Subscribe me </a>
+</div>
+
+<!-- add search box.-->
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  
+  <li><a href="/categories/#c++" title="c++" rel="7">c++ (7)</a></li>
+  
+  <li><a href="/categories/#emacs" title="emacs" rel="1">emacs (1)</a></li>
+  
+  <li><a href="/categories/#life" title="life" rel="2">life (2)</a></li>
+  
+</div>
+
+
+<div class="sidebar-module">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad3 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:200px"
+     data-ad-client="ca-pub-9801985319378542"
+     data-ad-slot="9930726111"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</script>
+</div>
+
+<div class="sidebar-module">
+  <h4>Tags</h4>
+  
+    <a href="/tags/#c++" title="c++" rel="6">c++(6)</a> &nbsp;
+  
+    <a href="/tags/#emacs" title="emacs" rel="1">emacs(1)</a> &nbsp;
+  
+    <a href="/tags/#welcome" title="welcome" rel="1">welcome(1)</a> &nbsp;
+  
+    <a href="/tags/#thinking" title="thinking" rel="1">thinking(1)</a> &nbsp;
+  
+    <a href="/tags/#operator" title="operator" rel="1">operator(1)</a> &nbsp;
+  
+    <a href="/tags/#reference" title="reference" rel="3">reference(3)</a> &nbsp;
+  
+    <a href="/tags/#pointer" title="pointer" rel="2">pointer(2)</a> &nbsp;
+  
+    <a href="/tags/#function" title="function" rel="1">function(1)</a> &nbsp;
+  
+    <a href="/tags/#overload" title="overload" rel="1">overload(1)</a> &nbsp;
+  
+    <a href="/tags/#answer" title="answer" rel="1">answer(1)</a> &nbsp;
+  
+    <a href="/tags/#constructor" title="constructor" rel="1">constructor(1)</a> &nbsp;
+  
+    <a href="/tags/#class" title="class" rel="1">class(1)</a> &nbsp;
+  
+    <a href="/tags/#lvalue" title="lvalue" rel="1">lvalue(1)</a> &nbsp;
+  
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Recent Posts</h4>
+  
+  <li>
+  <a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue" >Lvalue and rvalue</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/constructor.html" title="Constructor in c++" >Constructor in c++</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th" >Answers to C++ Primer 5th and Primer Plus 6th</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/function-overload.html" title="Function Overload" >Function Overload</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/reference-and-pointer.html" title="Reference in C++" >Reference in C++</a>
+  </li>
+  
+</div>
+
+<div class="sidebar-module">
+  <h4>Archives</h4>
+
+  
+  
+  
+  
+  
+  <li id="2015" > <a href="/archives/#2015">2015</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Blogroll</h4>
+  
+  <li><a href="http://wangzhetju.wix.com/wangzhe" title="My blog">wangzhe3224</a></li>
+  
+</div>
+
+
+<div class="sidebar-module"> <!-- sidebar-module-inset">-->
+</div>
+
+
+</div>
+
+
+  
+
+  <footer class="site-footer">
+
+  <p>Copyright &copy; <a href="/">Coding Life</a></p>
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+  on 
+  
+  <a href="https://github.com/">Github</a>
+  
+
+</footer>
+
+
+</div>
+</body>
+
+<!-- 滚动特效 -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+var $scrolltopBtn = $('#scrolltop'),
+    _timeoutId;
+$(window).scroll(function () {
+  if(_timeoutId){
+    clearTimeout(_timeoutId);
+  }
+  _timeoutId =  setTimeout(function(){
+      if ($(this).scrollTop() > 100) {
+        $scrolltopBtn.fadeIn();
+      } else {
+        $scrolltopBtn.fadeOut();
+      }
+    }, 100);
+});
+$scrolltopBtn.click(function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 300);
+  return false;
+});</script>
+<!-- 滚动特效 -->
+
+<!-- google analytic -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66629043-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- google analytic -->
+</html>

@@ -23,15 +23,14 @@ Constructors handles what will happen when a object of a class type is created.
 **Tips:**
 
 >
-A class also have other kinds of construtors to handle different behaviours of an object of a class type.  
-- Creating object: **constructor**  
-- Moving object  : **moving construtor**  
-- Copy object    : **copy construtor**  
-- Destroy object : **destructor**....well.. this is a De-constructor....  
+A class also have other kinds of construtors to handle different ways of creating an object of a class type.  
+- Creating object: **(normal?)constructor**, it creats object by initializers.    
+- Moving object  : **moving construtor**, it creats object by copying another object with the same type.       
+- Copy object    : **copy construtor**,  it creats object by moving anthter object wiht the same type.
 
-Constructors don't have return value.
+- Constructors don't have return value.
 
-**default constructor**, sometimes called **
+- **default constructor** is a constructor without any **non-default** parameter.
 
 ## 2. How do construtor work
 

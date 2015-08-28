@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<meta property="og:title" content="Constructor in c++">
+<title>Constructor in c++</title>
+<meta property="og:description" content="">
+<meta property="og:url" content="http://wangzhe3224.github.io//c++/2015/08/26/constructor.html">
+<meta property="og:site_name" content="Coding Life">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title" content="Constructor in c++">
+<meta name="twitter:description" content="">
+<meta name="twitter:url" content="http://wangzhe3224.github.io//c++/2015/08/26/constructor.html">
+
+<meta name="keywords" content="c++, algorithm, structures, python">
+
+<link rel="icon" href="/images/Linux.png">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="http://wangzhe3224.github.io//c++/2015/08/26/constructor.html">
+<link rel="alternate" type="application/atom+xml" title="Coding Life" href="http://wangzhe3224.github.io//feed.xml" />
+
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</head>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66629043-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body>
+
+<!-- add to top function-->
+<div id="scrolltop">
+	<span class="icon">
+	  <i class="upArrow"></i>
+	</span>
+</div>
+<!-- add to top function-->
+
+<div class="container">
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <h1 class="site-title">Coding Life</h1>
+    <!--<h3 class="site-meta"></h3>-->
+
+    <nav class="site-nav">
+      <div class="trigger">
+        
+        
+            <a class="page-link" href="/">Home</a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/archives/">Archives</a>
+        
+        
+        
+            <a class="page-link" href="/categories/">Categories</a>
+        
+        
+        
+            <a class="page-link" href="/tags/">Tags</a>
+        
+        
+        
+            <a class="page-link" href="/books/">Books</a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/leaveMessage/">Leave Message</a>
+        
+        
+        
+            <a class="page-link" href="/index.html"></a>
+        
+        
+        
+            <a class="page-link" href="/css/main.css"></a>
+        
+        
+        
+        
+        
+            <a class="page-link" href="/page2/index.html"></a>
+        
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    
+
+  <div class="page-content col-sm-8">
+    <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 itemprop="name" class="post-title">Constructor in c++</h1>
+    <meta itemprop="keywords" content="constructor,c++,class" />
+    <p class="post-meta">
+    Posted in
+    
+    <a href="/categories/#c++">c++</a>&nbsp;
+     
+    
+    and tagged
+    
+    <a href="/tags/#constructor" title="constructor">constructor </a>, 
+    
+    <a href="/tags/#c++" title="c++">c++ </a>, 
+    
+    <a href="/tags/#class" title="class">class </a>
+    
+    
+    <time itemprop="datePublished" datetime="2015-08-26">
+    on Aug 26, 2015
+    </time>
+    </p>
+    
+  </header>
+
+  <article class="post-content" itemprop="articleBody">
+  <div id="category"></div>
+    <ul id="markdown-toc">
+  <li><a href="#what-is-a-constructor" id="markdown-toc-what-is-a-constructor">1. What is a <strong>Constructor</strong></a></li>
+  <li><a href="#how-do-construtor-work" id="markdown-toc-how-do-construtor-work">2. How do construtor work</a></li>
+  <li><a href="#categories-of-constructors" id="markdown-toc-categories-of-constructors">3.Categories of Constructors</a></li>
+</ul>
+
+<h2 id="what-is-a-constructor">1. What is a <strong>Constructor</strong></h2>
+
+<p><strong>Defination:</strong></p>
+
+<blockquote>
+
+  <p>Constructors are <em>special member function(s)</em> of the related class. The job of a constructor is to <strong>initialize the data members</strong> of a class object. A constructor is run whenever an object of a class type is <strong>created</strong>.
+Constructors handles what will happen when a object of a class type is created.</p>
+</blockquote>
+
+<p><strong>Tips:</strong></p>
+
+<blockquote>
+
+  <p>A class also have other kinds of construtors to handle different ways of creating an object of a class type.<br />
+- Creating object: <strong>(normal?)constructor</strong>, it creats object by initializers.  <br />
+- Moving object  : <strong>moving construtor</strong>, it creats object by copying another object with the same type.     <br />
+- Copy object    : <strong>copy construtor</strong>,  it creats object by moving anthter object wiht the same type.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Constructors don’t have return value.</p>
+  </li>
+  <li>
+    <p><strong>default constructor</strong> is a constructor without any <strong>non-default</strong> parameter.</p>
+  </li>
+</ul>
+
+<h2 id="how-do-construtor-work">2. How do construtor work</h2>
+
+<p>If we do not explicitly initialize a member in the constructor initializer list, that member is default initialized <strong>before</strong> the constructor body starts executing.</p>
+
+<h2 id="categories-of-constructors">3.Categories of Constructors</h2>
+
+<ol>
+  <li><code>Default constructor</code>: The default constructor is one that takes no arguments.</li>
+  <li><code>Synthesized default constructor</code> : The default constructor generated by the compiler.</li>
+  <li><code>Delegating constructor</code> : A delegating constructor uses another constructor from its own class to perform its initialization. It is said to “delegate” some (or all) of its work to this other constructor.</li>
+  <li><code>Converting constructor</code> : Every constructor which can be called with <strong>one non-default</strong> parameter without specifier <code>explicit</code>. This constructor defines a implicit conversion to the <em>class type</em></li>
+</ol>
+
+
+  </article>
+  <hr />
+</div>
+
+
+<section class="pager">
+  <ul>
+    
+    <li class="previous"><a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th">&larr; Older</a></li>
+    
+    
+    <li class="next"><a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue">Newer &rarr;</a></li>
+    
+  </ul>
+</section>
+
+
+  
+
+
+    <section class="pager">
+  
+  
+</section>
+
+
+  </div>
+  <div class="col-sm-2">
+<div class="sidebar-module about">
+  <h4>About Me</h4>
+  <img title="Wang Zhe" src="/images/myphoto.png" alt="Wang Zhe"/>
+  <span>Coding life.</span>
+  <br />
+
+  
+
+  You can contact me via:
+
+  
+  <a href="mailto:wangzhetju@gmail.com" title="mailto: wangzhetju@gmail.com">Email</a> or
+  
+  
+  <a href="https://github.com/wangzhe3224" title="GithubID: wangzhe3224">Github</a>
+  
+
+  
+  <p></p>
+  <a href="/feed.xml"> Subscribe me </a>
+</div>
+
+<!-- add search box.-->
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  
+  <li><a href="/categories/#c++" title="c++" rel="7">c++ (7)</a></li>
+  
+  <li><a href="/categories/#emacs" title="emacs" rel="1">emacs (1)</a></li>
+  
+  <li><a href="/categories/#life" title="life" rel="2">life (2)</a></li>
+  
+</div>
+
+
+<div class="sidebar-module">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad3 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:200px"
+     data-ad-client="ca-pub-9801985319378542"
+     data-ad-slot="9930726111"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</script>
+</div>
+
+<div class="sidebar-module">
+  <h4>Tags</h4>
+  
+    <a href="/tags/#c++" title="c++" rel="6">c++(6)</a> &nbsp;
+  
+    <a href="/tags/#emacs" title="emacs" rel="1">emacs(1)</a> &nbsp;
+  
+    <a href="/tags/#welcome" title="welcome" rel="1">welcome(1)</a> &nbsp;
+  
+    <a href="/tags/#thinking" title="thinking" rel="1">thinking(1)</a> &nbsp;
+  
+    <a href="/tags/#operator" title="operator" rel="1">operator(1)</a> &nbsp;
+  
+    <a href="/tags/#reference" title="reference" rel="3">reference(3)</a> &nbsp;
+  
+    <a href="/tags/#pointer" title="pointer" rel="2">pointer(2)</a> &nbsp;
+  
+    <a href="/tags/#function" title="function" rel="1">function(1)</a> &nbsp;
+  
+    <a href="/tags/#overload" title="overload" rel="1">overload(1)</a> &nbsp;
+  
+    <a href="/tags/#answer" title="answer" rel="1">answer(1)</a> &nbsp;
+  
+    <a href="/tags/#constructor" title="constructor" rel="1">constructor(1)</a> &nbsp;
+  
+    <a href="/tags/#class" title="class" rel="1">class(1)</a> &nbsp;
+  
+    <a href="/tags/#lvalue" title="lvalue" rel="1">lvalue(1)</a> &nbsp;
+  
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Recent Posts</h4>
+  
+  <li>
+  <a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue" >Lvalue and rvalue</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/constructor.html" title="Constructor in c++" >Constructor in c++</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th" >Answers to C++ Primer 5th and Primer Plus 6th</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/function-overload.html" title="Function Overload" >Function Overload</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/reference-and-pointer.html" title="Reference in C++" >Reference in C++</a>
+  </li>
+  
+</div>
+
+<div class="sidebar-module">
+  <h4>Archives</h4>
+
+  
+  
+  
+  
+  
+  <li id="2015" > <a href="/archives/#2015">2015</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Blogroll</h4>
+  
+  <li><a href="http://wangzhetju.wix.com/wangzhe" title="My blog">wangzhe3224</a></li>
+  
+</div>
+
+
+<div class="sidebar-module"> <!-- sidebar-module-inset">-->
+</div>
+
+
+</div>
+
+
+  
+
+  <footer class="site-footer">
+
+  <p>Copyright &copy; <a href="/">Coding Life</a></p>
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+  on 
+  
+  <a href="https://github.com/">Github</a>
+  
+
+</footer>
+
+
+</div>
+</body>
+
+<!-- 滚动特效 -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+var $scrolltopBtn = $('#scrolltop'),
+    _timeoutId;
+$(window).scroll(function () {
+  if(_timeoutId){
+    clearTimeout(_timeoutId);
+  }
+  _timeoutId =  setTimeout(function(){
+      if ($(this).scrollTop() > 100) {
+        $scrolltopBtn.fadeIn();
+      } else {
+        $scrolltopBtn.fadeOut();
+      }
+    }, 100);
+});
+$scrolltopBtn.click(function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 300);
+  return false;
+});</script>
+<!-- 滚动特效 -->
+
+<!-- google analytic -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66629043-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- google analytic -->
+</html>

@@ -16,7 +16,12 @@ tags:
 
 `Reference` is an alias (an alternate name) for an **existing** object. But `reference` is not a pointer to the object, it is actually the object itself.
 
-- A **reference-to-someType** points to the same memory location which the refeeing object uses.
+**Here we mainly discuss lvalue reference**
+
+[Lvalue and rvalue]() discussed something about lvalue and rvalue.
+
+- A **reference-to-someType** points to the same memory location which the
+ refeeing object uses.
 
 - Reference is not actually a **variable**.
 
@@ -32,11 +37,17 @@ tags:
 
 ## 2. Define a reference
 
-Declare and initialize of a reference:
+Declare and initialize of a reference-to lvalue:
 
 `<type> & <name> = existingObj;`
 
-where, `<type>` is a [type][1] and `<name>` is an identifier whose type is **reference-to-\<type\>**.
+where, `<type>` is a [type][1] and `<name>` is an identifier whose type is **lvalue reference-to-\<type\>**.
+
+In c++ 11 there is a new feature called **rvalue reference**:
+
+`<type> && <name> = existingObj;`
+
+where, `<type>` is a [type][1] and `<name>` is an identifier whose type is **rvalue reference-to-\<type\>**.
 
 >![Declaration in C++](http://m.eet.com/media/1074314/0102ppfig1.gif) Declaration in C++. [ref](http://www.embedded.com/electronics-blogs/programming-pointers/4023290/References-and-const)
 >
@@ -163,7 +174,8 @@ int main() {
 }
 {%endhighlight%}
 
-Here we use **passing-by reference** to change the value of the argument.
+Here we use **call-by reference** to change the value of the argument.  
+We can also use **call by reference-to-const** to ensure the funciton cannot chage the passing parameters.
 
 #### 4.2 As function return value
 
