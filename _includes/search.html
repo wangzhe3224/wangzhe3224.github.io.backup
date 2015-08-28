@@ -1,10 +1,8 @@
-<div class="sidebar-module">
-   {% for page in site.pages %}
-       {% if page.title == 'Search' %}
-            <form action="{{ '/search' | prepend: site.baseurl }}" method="GET">
-              <label for="query">Search:</label>
-              <input type="text" name="query" placeholder="Enter your search term">
-            </form>
-       {% endif %}
-   {% endfor %}
-</div>
+<script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("my-google-search").value;
+    window.open("http://google.com/search?q=" + query
+	+ "%20site:" + "http://wangzhe3224.github.io/");
+  }
+</script>

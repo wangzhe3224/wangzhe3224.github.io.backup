@@ -5,9 +5,34 @@
     <description>Programming, structures and life.</description>
     <link>http://wangzhe3224.github.io//</link>
     <atom:link href="http://wangzhe3224.github.io//zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Aug 2015 14:12:34 +0100</pubDate>
-    <lastBuildDate>Fri, 28 Aug 2015 14:12:34 +0100</lastBuildDate>
+    <pubDate>Fri, 28 Aug 2015 23:57:40 +0100</pubDate>
+    <lastBuildDate>Fri, 28 Aug 2015 23:57:40 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Linux 磁盘命令 df/du/ls</title>
+        <description>&lt;p&gt;今天在下载电影的时候突然只能上传，不能下载了。 产看一番发现，自己的home目录居然已经满了！
+于是开始查看磁盘各个目录的空间。 最后发现罪魁祸首竟然是自己的回收站满了。。。&lt;/p&gt;
+
+&lt;p&gt;Linux的回收站只收留在GUI操作下删除的文件以及文件夹， 他们存放在&lt;code&gt;～/.local/share/Trash/&lt;/code&gt; 目录
+下，把他删除后一切回复正常了….&lt;/p&gt;
+
+&lt;p&gt;期间用到如下几个命令查看磁盘的使用情况，记录顺便跟大家分享。&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;command-df&quot;&gt;1.Command: &lt;strong&gt;df&lt;/strong&gt;&lt;/h2&gt;
+
+</description>
+        <pubDate>Fri, 28 Aug 2015 20:00:00 +0100</pubDate>
+        <link>http://wangzhe3224.github.io//linux/2015/08/28/linux-command1.html</link>
+        <guid isPermaLink="true">http://wangzhe3224.github.io//linux/2015/08/28/linux-command1.html</guid>
+        
+        <category>command</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Lvalue and rvalue</title>
@@ -992,106 +1017,6 @@ int main() {
         
         
         <category>emacs</category>
-        
-      </item>
-    
-      <item>
-        <title>Learn C #1</title>
-        <description>&lt;h2 id=&quot;there-are-four-components-in-a-programming-language&quot;&gt;There are four components in a programming language:&lt;/h2&gt;
-
-&lt;h3 id=&quot;data&quot;&gt;1. data;&lt;/h3&gt;
-
-&lt;h3 id=&quot;operation&quot;&gt;2. operation;&lt;/h3&gt;
-
-&lt;h3 id=&quot;control-flow&quot;&gt;3. control flow;&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-and-output&quot;&gt;4. input and output.&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;We start with the first part: &lt;strong&gt;data&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;tips: when you define a variable, it’s &lt;strong&gt;better&lt;/strong&gt; to give it a initial value.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;basic-data-type&quot;&gt;basic data type:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;char&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;int&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;float&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;bool&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Tips: You can use ‘Tpyename variableName’ to define a certain type of variable.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;int&quot;&gt;int&lt;/h3&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//print hex number..&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oct&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//print oct number..&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//pring dec number. you must do this,,or it will print oct ..&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//Then we can input a hex number..&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFFFFF85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// a hex number&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;033333232&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// a oct number&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;float&quot;&gt;float&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;float - 4 byte - precise: 8&lt;/li&gt;
-  &lt;li&gt;double - 8 byte - precise: 15&lt;/li&gt;
-  &lt;li&gt;long double - 8 byte - precise: 15&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setprecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// print 40 digits..&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;char&quot;&gt;char&lt;/h3&gt;
-
-&lt;p&gt;It takes one byte, which means there are 256 characters.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Tips: char and int can add or minus ..&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39;Z&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;bool&quot;&gt;bool&lt;/h3&gt;
-
-&lt;p&gt;It takes one byte.&lt;/p&gt;
-
-&lt;h3 id=&quot;name-of-variable-identifier&quot;&gt;Name of variable (identifier)&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;Only&lt;/em&gt; character, number and _ are ligal…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;examples&quot;&gt;examples:&lt;/h4&gt;
-
-&lt;p&gt;chGrade; nLength; bOnOff; strStudentName..&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 27 Jul 2015 00:00:00 +0100</pubDate>
-        <link>http://wangzhe3224.github.io//c++/2015/07/27/clearning%231.html</link>
-        <guid isPermaLink="true">http://wangzhe3224.github.io//c++/2015/07/27/clearning%231.html</guid>
-        
-        <category>c++</category>
-        
-        
-        <category>c++</category>
         
       </item>
     

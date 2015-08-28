@@ -110,10 +110,20 @@
             <a class="page-link" href="/page2/index.html"></a>
         
         
+        
       </div>
+      
     </nav>
 
   </div>
+<script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("my-google-search").value;
+    window.open("http://google.com/search?q=" + query
+	+ "%20site:" + "http://wangzhe3224.github.io/");
+  }
+</script>
 
 </header>
 
@@ -128,6 +138,12 @@
 <script>
 	var JEKYLL_POSTS = [];
 	
+	JEKYLL_POSTS.push({
+		title: "Linux 磁盘命令 df/du/ls",
+		link: "/linux/2015/08/28/linux-command1.html",
+		content: "今天在下载电影的时候突然只能上传，不能下载了。 产看一番发现，自己的home目录居然已经满了！于是开始查看磁盘各个目录的空间。 最后发现罪魁祸首竟然是自己的回收站满了。。。Linux的回收站只收留在GUI操作下删除的文件以及文件夹， 他们存放在～/.local/share/Trash/ 目录下，把他删除后一切回复正常了….期间用到如下几个命令查看磁盘的使用情况，记录顺便跟大家分享。1.Command: df"
+	}); 
+    
 	JEKYLL_POSTS.push({
 		title: "Lvalue and rvalue",
 		link: "/c++/2015/08/28/lvalue-and-rvalue.html",
@@ -227,18 +243,30 @@
   <a href="/feed.xml"> Subscribe me </a>
 </div>
 
-<!-- add search box.-->
 <div class="sidebar-module">
-  <h4>Categories</h4>
+  <h4>Recent Posts</h4>
   
-  <li><a href="/categories/#c++" title="c++" rel="7">c++ (7)</a></li>
+  <li>
+  <a href="/linux/2015/08/28/linux-command1.html" title="Linux 磁盘命令 df/du/ls" >Linux 磁盘命令 df/du/ls</a>
+  </li>
   
-  <li><a href="/categories/#emacs" title="emacs" rel="1">emacs (1)</a></li>
+  <li>
+  <a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue" >Lvalue and rvalue</a>
+  </li>
   
-  <li><a href="/categories/#life" title="life" rel="2">life (2)</a></li>
+  <li>
+  <a href="/c++/2015/08/26/constructor.html" title="Constructor in c++" >Constructor in c++</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th" >Answers to C++ Primer 5th and Primer Plus 6th</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/function-overload.html" title="Function Overload" >Function Overload</a>
+  </li>
   
 </div>
-
 
 <div class="sidebar-module">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -252,6 +280,29 @@
 </script>
 </script>
 </div>
+
+<script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("my-google-search").value;
+    window.open("http://google.com/search?q=" + query
+	+ "%20site:" + "http://wangzhe3224.github.io/");
+  }
+</script>
+
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  
+  <li><a href="/categories/#c++" title="c++" rel="7">c++ (7)</a></li>
+  
+  <li><a href="/categories/#emacs" title="emacs" rel="1">emacs (1)</a></li>
+  
+  <li><a href="/categories/#life" title="life" rel="2">life (2)</a></li>
+  
+  <li><a href="/categories/#linux" title="linux" rel="1">linux (1)</a></li>
+  
+</div>
+
 
 <div class="sidebar-module">
   <h4>Tags</h4>
@@ -282,33 +333,10 @@
   
     <a href="/tags/#lvalue" title="lvalue" rel="1">lvalue(1)</a> &nbsp;
   
-</div>
-
-
-<div class="sidebar-module">
-  <h4>Recent Posts</h4>
-  
-  <li>
-  <a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue" >Lvalue and rvalue</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/26/constructor.html" title="Constructor in c++" >Constructor in c++</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th" >Answers to C++ Primer 5th and Primer Plus 6th</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/25/function-overload.html" title="Function Overload" >Function Overload</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/25/reference-and-pointer.html" title="Reference in C++" >Reference in C++</a>
-  </li>
+    <a href="/tags/#command" title="command" rel="1">command(1)</a> &nbsp;
   
 </div>
+
 
 <div class="sidebar-module">
   <h4>Archives</h4>
@@ -319,6 +347,9 @@
   
   
   <li id="2015" > <a href="/archives/#2015">2015</a></li>
+  
+  
+  
   
   
   

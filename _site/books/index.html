@@ -110,10 +110,20 @@
             <a class="page-link" href="/page2/index.html"></a>
         
         
+        
       </div>
+      
     </nav>
 
   </div>
+<script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("my-google-search").value;
+    window.open("http://google.com/search?q=" + query
+	+ "%20site:" + "http://wangzhe3224.github.io/");
+  }
+</script>
 
 </header>
 
@@ -124,6 +134,7 @@
     <ul id="markdown-toc">
   <li><a href="#section" id="markdown-toc-section"><strong><code>正在阅读</code></strong></a>    <ul>
       <li><a href="#c-primer5th" id="markdown-toc-c-primer5th">1. C++ Primer(5th)</a></li>
+      <li><a href="#date-structure-and-algorithm-analysis-in-c-6th" id="markdown-toc-date-structure-and-algorithm-analysis-in-c-6th">2. Date Structure and Algorithm Analysis in C++ (6th)</a></li>
     </ul>
   </li>
   <li><a href="#section-1" id="markdown-toc-section-1"><code>计划阅读</code></a></li>
@@ -142,8 +153,13 @@
 <h3 id="c-primer5th">1. C++ Primer(5th)</h3>
 
 <ul>
-  <li><a href="https://github.com/wangzhe3224/cxxPrimer5th">C++ Primer 5th Answers(Under going)</a> <br />
-### 2. Date Structure and Algorithm Analysis in C++ (6th)</li>
+  <li><a href="https://github.com/wangzhe3224/cxxPrimer5th">C++ Primer 5th Answers(Under going)</a></li>
+</ul>
+
+<h3 id="date-structure-and-algorithm-analysis-in-c-6th">2. Date Structure and Algorithm Analysis in C++ (6th)</h3>
+
+<ul>
+  <li><a href="https://github.com/wangzhe3224/DataStructure_Algorithm_cpp">Answers:Date Structure and Algorithm Analysis in C++ (6th)(Under going)</a></li>
 </ul>
 
 <h2 id="section-1"><code>计划阅读</code></h2>
@@ -191,18 +207,30 @@
   <a href="/feed.xml"> Subscribe me </a>
 </div>
 
-<!-- add search box.-->
 <div class="sidebar-module">
-  <h4>Categories</h4>
+  <h4>Recent Posts</h4>
   
-  <li><a href="/categories/#c++" title="c++" rel="7">c++ (7)</a></li>
+  <li>
+  <a href="/linux/2015/08/28/linux-command1.html" title="Linux 磁盘命令 df/du/ls" >Linux 磁盘命令 df/du/ls</a>
+  </li>
   
-  <li><a href="/categories/#emacs" title="emacs" rel="1">emacs (1)</a></li>
+  <li>
+  <a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue" >Lvalue and rvalue</a>
+  </li>
   
-  <li><a href="/categories/#life" title="life" rel="2">life (2)</a></li>
+  <li>
+  <a href="/c++/2015/08/26/constructor.html" title="Constructor in c++" >Constructor in c++</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th" >Answers to C++ Primer 5th and Primer Plus 6th</a>
+  </li>
+  
+  <li>
+  <a href="/c++/2015/08/25/function-overload.html" title="Function Overload" >Function Overload</a>
+  </li>
   
 </div>
-
 
 <div class="sidebar-module">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -216,6 +244,29 @@
 </script>
 </script>
 </div>
+
+<script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("my-google-search").value;
+    window.open("http://google.com/search?q=" + query
+	+ "%20site:" + "http://wangzhe3224.github.io/");
+  }
+</script>
+
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  
+  <li><a href="/categories/#c++" title="c++" rel="7">c++ (7)</a></li>
+  
+  <li><a href="/categories/#emacs" title="emacs" rel="1">emacs (1)</a></li>
+  
+  <li><a href="/categories/#life" title="life" rel="2">life (2)</a></li>
+  
+  <li><a href="/categories/#linux" title="linux" rel="1">linux (1)</a></li>
+  
+</div>
+
 
 <div class="sidebar-module">
   <h4>Tags</h4>
@@ -246,33 +297,10 @@
   
     <a href="/tags/#lvalue" title="lvalue" rel="1">lvalue(1)</a> &nbsp;
   
-</div>
-
-
-<div class="sidebar-module">
-  <h4>Recent Posts</h4>
-  
-  <li>
-  <a href="/c++/2015/08/28/lvalue-and-rvalue.html" title="Lvalue and rvalue" >Lvalue and rvalue</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/26/constructor.html" title="Constructor in c++" >Constructor in c++</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/26/cppPrimerAnswers.html" title="Answers to C++ Primer 5th and Primer Plus 6th" >Answers to C++ Primer 5th and Primer Plus 6th</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/25/function-overload.html" title="Function Overload" >Function Overload</a>
-  </li>
-  
-  <li>
-  <a href="/c++/2015/08/25/reference-and-pointer.html" title="Reference in C++" >Reference in C++</a>
-  </li>
+    <a href="/tags/#command" title="command" rel="1">command(1)</a> &nbsp;
   
 </div>
+
 
 <div class="sidebar-module">
   <h4>Archives</h4>
@@ -283,6 +311,9 @@
   
   
   <li id="2015" > <a href="/archives/#2015">2015</a></li>
+  
+  
+  
   
   
   
