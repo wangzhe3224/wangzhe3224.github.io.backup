@@ -1,5 +1,6 @@
-.sass-cache
-_site
+_site/
+.sass-cache/
+.jekyll-metadata
 
 # Compiled Object files
 *.slo

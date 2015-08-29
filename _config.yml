@@ -9,6 +9,7 @@ baseurl: #"/blog" # the subpath of your site, e.g. /blog
 url: "http://wangzhe3224.github.io/" # the base hostname & protocol for your site
 locale: en_US
 google_analytics: UA-66629043-2
+comments: true
 
 ### Personal info and site tools info:
 twitter_username: #wangzhe3224

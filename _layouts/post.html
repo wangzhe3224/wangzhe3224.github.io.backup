@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
@@ -33,7 +34,7 @@ layout: default
 
 {% include page_pagination.html%}
 
-  {% if !page.comments %}
-  {% include comments.html %}
-  {% endif %}
+{% if page.comments %}
+    {% include comments.html %}
+{% endif %}
 

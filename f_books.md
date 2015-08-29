@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: page
 title: Books
 permalink: /books/
+comments: true
 ---
 * auto-gen TOC:
 {:toc}
