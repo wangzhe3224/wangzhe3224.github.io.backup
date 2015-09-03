@@ -11,6 +11,9 @@ locale: en_US
 google_analytics: UA-66629043-2
 comments: true
 
+### 自定义全局变量
+
+
 ### Personal info and site tools info:
 twitter_username: #wangzhe3224
 github_username:  wangzhe3224
