@@ -47,6 +47,10 @@ $ sudo mount -o loop /iso目/录/abaqus.iso  /挂载/目录
 
 - 3.2 在挂载目录里面找到 `xxx/lnx64（或者类似的目录）/`,这个目录有一个`setup`程序，然后 `sudo ./setup`。 接下来会提示输入临时目录的地址，一般输入`/tmp` 即可。 然后就启动了安装界面，后面的操作跟windows安装一模一样。
 
+安装过程中会提示输入端口和主机名称，这是输入：
+
+`27011@主机名`
+
 - 3.3 设置系统别名，方便运行。 在~/.bashrc中添加如下指令：
 
 `alias abaqus='sudo /usr/simulia/license/lmgrd -c ABAQUS.lic; XLIB_SKIP_ARGB_VISUALS=1 ~/ABAqus/Commands/abq6141 cae'`
@@ -55,7 +59,7 @@ $ sudo mount -o loop /iso目/录/abaqus.iso  /挂载/目录
 
 如果，不需要abaqus cae界面，可以直接用：
 
-`alias abaqus='sudo /usr/simulia/license/lmgrd -c ABAQUS.lic; XLIB_SKIP_ARGB_VISUALS=1 ~/ABAqus/Commands/abq6141 ‘`
+`alias abaqus='sudo /usr/simulia/license/lmgrd -c ABAQUS.lic; XLIB_SKIP_ARGB_VISUALS=1 ~/ABAqus/Commands/abq6141`
 
 这样会进入abaqus的命令行模式，直接输入inp文件就可以计算了！
 
