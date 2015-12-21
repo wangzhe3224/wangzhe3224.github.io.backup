@@ -21,6 +21,8 @@ comments: true
 
 - [Answers:Date Structure and Algorithm Analysis in C++ (6th)(Under going)](https://github.com/wangzhe3224/DataStructure_Algorithm_cpp)
 
+### 3. [python_data_structure_and_algorithms](https://github.com/wangzhe3224/python_data_structure_and_algorithms)
+
 ## `计划阅读`
 
 <hr>
