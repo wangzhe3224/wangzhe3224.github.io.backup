@@ -13,7 +13,7 @@ Emacs会定时自动生成一些备份文件，这些文件的后面都会带一
 
 1. 在emasc配置文件~/.emacs中添加如下代码：
 
-```
+``` lisp
 (setq backup-directory-alist
     `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
@@ -28,7 +28,7 @@ Emacs会定时自动生成一些备份文件，这些文件的后面都会带一
 
 2. 为了保证备份不会一直保存下去，导致备份文件体积过大，继续加入如下代码：
 
-```
+``` lisp
 (message "Deleting old backup files...")
     (let ((week (* 60 60 24 7))
          (current (float-time (current-time))))
