@@ -16,6 +16,8 @@ tags: 装饰器
 
 上面这三个装饰器可谓是Python中class定义中最具特色的了。我们举例来说明：
 
+**@staticmethod**和**@classmethod**
+
 ``` python
 # For python2
 class Mystring(object):
@@ -43,7 +45,8 @@ print A.show_info
 print A.fromlist
 ```
 
-`@staticmethod`会将类中的方法变成静态方法，这些静态方法不会传入`self`参数，这也意味着，他不能访问类中的属性或者方法（比如`show_info`函数是不能访问`self.s`）。我们可以通过class或者instance调用静态方法，如`Mystring.show_info() or A.show_info()`。其实，这些方法完全可以定义在class的外部。但是静态方法的优势就在于**可以把与Mystring类相关的一切方法都隐藏在该类里面，这样也减少了冲突的可能。**
+`@staticmethod`会将类中的方法变成静态方法，这些静态方法不会传入`self`参数，这也意味着，他不能访问类中的属性或者方法（比如`show_info`函数是不能访问`self.s`）。我们可以通过class或者instance调用静态方法，如`Mystring.show_info() or A.show_info()`。其实，这些方法完全可以定义在class的外部。但是静态方法的优势就在于**可以把与Mystring类相关的一切方法都隐藏在该类里面，这样也减少了冲突的可能**，也就是说，如果想调用类中的静态函数，需要采用如下形式：`class.staticmethod()`。怎么样，是不是有点namespace的意思！？
+
 
 `@classmethod`会将方法变成类方法，这些类方法会传入`cls`参数，而不是`self`参数。`cls`就是*the class of the instance*。这个函数只能由class调用，而不能由实体(instance)调用，因为这个函数并没有传入`self`参数。例如上面代码中的`from_list`函数，他们通过传入的`cls`在函数体内实例化一个Mystring类，通过这个实体间接访问实体属性。这个例子，其实也给出了类方法的一个重要的应用：**实现了另一个构造函数**。Python里面并没有重载构造函数的机制，每个类只有一个`__init__`函数，类方法就成了实现额外构造函数的方法之一（其他方法还可以通过判断`__init__`函数的参数来实现）。
 
