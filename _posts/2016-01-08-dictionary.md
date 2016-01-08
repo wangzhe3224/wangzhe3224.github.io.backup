@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      哦！Python可爱的‘字典’！
+title:      Python可爱的字典
 date:       2016-01-08
 categories: python
 tags:dictionary
