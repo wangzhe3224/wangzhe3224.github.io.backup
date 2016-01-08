@@ -3,7 +3,7 @@ layout:     post
 title:      Python可爱的字典
 date:       2016-01-08
 categories: python
-tags:dictionary
+tags: dictionary
 ---
 
 刚开始写Python的时候总是有意无意的忽视字典的使用，总是用list或者tuple组织数据结构。后来渐渐发现字典（dictionary）真的是Python里面非常好用且神奇的东西。
