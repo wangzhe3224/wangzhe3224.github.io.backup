@@ -137,6 +137,17 @@ rows_by_fname = sorted(rows, key=lambda item: item['fname'])
 # 想想看装饰器？？？
 ```
 
+- 频率统计
+
+```python
+letters = "abcabcdefghi"
+# 统计上面每一个字母出现的次数
+fre = {}
+for c in letters:
+	fre[c] = fre.get(c, 0) + 1
+# 原理请参看上文对get方法的介绍！
+```
+
 ### 总结
 
 好了，应把握我对字典理解记录在这里，希望大家能够有收获，也期待更多的讨论！
