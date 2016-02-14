@@ -66,7 +66,7 @@ Blogroll:
 
 
 ### Build settings
-#markdown: kramdown
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+#markdown: redcarpet
+#highlighter: pygments
 paginate: 10
