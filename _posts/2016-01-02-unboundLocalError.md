@@ -2,7 +2,7 @@
 layout:     post
 title:      Python的UnboundLocalValue
 date:       2016-01-02
-categories: Python
+categories: python
 tags: UnboundLocalError
 ---
 

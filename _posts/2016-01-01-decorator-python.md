@@ -2,7 +2,7 @@
 layout:     post
 title:      Python里面“著名”的装饰器-class的装饰器(1)
 date:       2016-01-01
-categories: Python
+categories: python
 tags: 装饰器
 ---
 
