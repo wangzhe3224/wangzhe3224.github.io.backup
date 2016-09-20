@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 量化缠论-2: 包含关系
+title: 量化缠论-2：包含关系
 date: 2016-09-20 16:00
 categories: 缠论
 tags:
