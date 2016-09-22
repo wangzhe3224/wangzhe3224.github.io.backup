@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 量化缠论-3：分型
-date: 2016-09-2２ 16:00
+date: 2016-09-22 16:00
 categories: 缠论
 tags:
 - 技术分析
