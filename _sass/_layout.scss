@@ -227,7 +227,7 @@
   h2 {
     font-size: 30px;
     line-height:1em;
-    border-bottom: 1px solid #CCCCCC
+    border-bottom: 1px solid #CCCCCC;
     @include media-query($on-laptop) {
       font-size: 28px;
     }
